@@ -11,9 +11,6 @@ LABEL org.ceylon-lang.dockerfile.description="Base image for Ceylon build images
 
 RUN useradd -ms /bin/bash -G sudo ceylon && echo 'ceylon ALL=(ALL:ALL) NOPASSWD: ALL' > /etc/sudoers.d/ceylon
 
-RUN mkdir /output
-VOLUME /output
-
 USER ceylon
 
 WORKDIR /home/ceylon
